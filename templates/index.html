@@ -1,48 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Login</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-    />
-  </head>
-  <body>
-    <div class="login">
-      <h1>Login</h1>
-      <div class="links">
-        <a href="{{ url_for('login') }}" class="active">Login</a>
-        <a href="#">Register</a>
-      </div>
-      <form action="{{ url_for('login') }}" method="post">
-        <label for="username">
-          <i class="fas fa-user"></i>
-        </label>
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          id="username"
-          required
-        />
-        <label for="password">
-          <i class="fas fa-lock"></i>
-        </label>
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          id="password"
-          required
-        />
-        <div class="msg">{{ msg }}</div>
-        <input type="submit" value="Login" />
-      </form>
-    </div>
-  </body>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Hjem</title>
+</head>
+<body>
+<header>
+  <h1>Velkommen til Vårt Digitale Bibliotek</h1>
+  <p id="greeting"></p> <!-- Dette elementet vil inneholde en dynamisk hilsen -->
+</header>
+<nav>
+  <!-- Navigasjonslenker basert på brukerstatus -->
+</nav>
+<!-- Innhold basert på brukerroller og funksjoner -->
+<script>
+  // JavaScript for å vise en hilsen basert på tid på døgnet
+  const now = new Date();
+  const hour = now.getHours();
+  let greeting;
+  if (hour < 12) {
+    greeting = "God morgen!";
+  } else if (hour < 18) {
+    greeting = "God ettermiddag!";
+  } else {
+    greeting = "God kveld!";
+  }
+  document.getElementById('greeting').innerText = greeting;
+</script>
+</body>
 </html>
