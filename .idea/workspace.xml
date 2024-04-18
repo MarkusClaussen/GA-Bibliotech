@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48a11b43-6e90-4e8b-92a0-36010f129f03" name="Changes" comment="More commitment issues">
+    <list default="true" id="48a11b43-6e90-4e8b-92a0-36010f129f03" name="Changes" comment="Daddyissues">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/zigzag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/zigzag.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713251960084</updated>
-      <workItem from="1713424699024" duration="6392000" />
+      <workItem from="1713424699024" duration="7166000" />
     </task>
     <task id="LOCAL−00001" summary="More commitment issues">
       <option name="closed" value="true" />
@@ -92,7 +91,14 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1713436788245</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Daddyissues">
+      <option name="closed" value="true" />
+      <created>1713437907066</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1713437907066</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +106,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="More commitment issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="More commitment issues" />
+    <MESSAGE value="Daddyissues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Daddyissues" />
   </component>
 </project>
