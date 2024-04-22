@@ -23,28 +23,32 @@ def låne_bok():
             WHERE ISBN = %s 
             AND EksNr NOT IN (
                 SELECT EksNr FROM utlån
+                WHERE ISBN = %s AND Levert = 0
             )
             LIMIT 1
-        """, (isbn,))
-        eksemplar = cursor.fetchone()
+        """, (isbn, isbn))
+        første_tilgjengelige_eksemplar = cursor.fetchone()
 
-        if eksemplar:
-            eksnr = eksemplar[0]
+        if første_tilgjengelige_eksemplar:
+            valgt_eksemplar = første_tilgjengelige_eksemplar[0]
 
             # Registrer utlånet i databasen
             cursor.execute("INSERT INTO utlån (LNr, ISBN, EksNr, Utlånsdato, Levert) VALUES (%s, %s, %s, CURDATE(), 0)",
-                           (lnr, isbn, eksnr))
+                           (lnr, isbn, valgt_eksemplar))
             mydb.commit()
             print("Boken er lånt ut.")
         else:
-            print("Boken er ikke tilgjengelig for utlån.")
+            print("Boken er ikke tilgjengelig for utlån for øyeblikket.")
     except mysql.connector.Error as err:
         print("Feil ved låning av bok:", err)
     finally:
-        if 'mydb' in locals() and mydb.is_connected():
-            cursor.close()
-            mydb.close()
-            print("Databaseforbindelsen er lukket.")
+        try:
+            if mydb.is_connected():
+                cursor.close()
+                mydb.close()
+                print("Databaseforbindelsen er lukket.")
+        except NameError:
+            pass
 
 # Bruk funksjonen
 låne_bok()
